@@ -1,0 +1,16 @@
+GET
+curl.exe -X GET http://127.0.0.1:5000/books
+curl.exe -X GET http://127.0.0.1:5000/books/2
+
+POST
+curl.exe -X POST http://127.0.0.1:5000/books ^
+ -H "Content-Type: application/json" ^
+ -d "{\"title\":\"El principito\",\"author\":\"Antoine de Saint-Exupéry\"}"
+
+UPDATE
+curl.exe -X PUT http://127.0.0.1:5000/books/1 ^
+ -H "Content-Type: application/json" ^
+ -d "{\"title\":\"Cien años de soledad (Edición revisada)\",\"author\":\"Gabriel García Márquez\"}"
+
+DELETE
+curl.exe -X DELETE http://127.0.0.1:5000/books/3
